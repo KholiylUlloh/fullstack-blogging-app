@@ -8,7 +8,7 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="page-heading">
                             <h1>Create Post</h1>
-                            <span class="subheading">Create someting interesting</span>
+                            <span class="subheading">Create a Post which will be worth to read</span>
                         </div>
                     </div>
                 </div>
@@ -18,10 +18,14 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8 offset-md-2">
-              <form action="/post/created" method="POST">
+              <form action="/posts/create" method="POST" enctype="multipart/form-data">
                 <div class="form-floating">
-                  <input type="text" class="form-control" name="title" placeholder="Your name is...">
+                  <input type="text" class="form-control" name="username" placeholder="Your name is...">
                   <label>Name</label>
+                </div>
+                <div class="form-floating">
+                  <input type="text" class="form-control" name="title" placeholder="Your title is...">
+                  <label>Title</label>
                 </div>
                 <div class="form-floating">
                   <input type="text" class="form-control" name="description" placeholder="Description...">
@@ -30,6 +34,10 @@
                 <div class="form-floating">
                   <textarea name="content" class="form-control" placeholder="Enter your thoughts..."></textarea>
                   <label>Content</label>
+                </div>
+                <div class=" form-floating mt-3">
+                  <label for="formFile" class="form-label"></label>
+                  <input class="form-control" type="file" name="image" id="formFile">
                 </div>
                 <div class="form-group text-center m-4">
                   <button class="btn btn-primary">Create</button>
